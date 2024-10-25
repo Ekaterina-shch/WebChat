@@ -2671,7 +2671,7 @@
           </button>
         </div>
 
-        <form action="form.php" method="post" class="form form__body">
+        <form class="form form__body" name="form" id="form">
           <div class="form__item">
             <label class="form-lable" for="name">
               Имя <span class="red">*</span>
@@ -2722,8 +2722,8 @@
 
           <div class="form__item form__item--tablet">
             <div class="form__item--file">
-              <input type="file" class="form-file" id="file" />
-              <label for="file" class="label-file">
+              <input type="file" class="form-file" id="fileInput" />
+              <label for="fileInput" class="label-file">
                 <svg
                   width="28"
                   height="28"
@@ -2738,11 +2738,13 @@
                 </svg>
                 Приложить файлы
               </label>
+
+              <ul id="fileList"></ul>
             </div>
 
             <div class="form__item--chebox">
               <input type="checkbox" id="checkbox" class="checkbox" required />
-              <label for="checkbox"></label>
+              <label for="checkbox"> </label>
               <p class="label-checkbox">
                 Согласен на обработку персональных данных<br />
                 в соответствии с 
@@ -2753,7 +2755,7 @@
             </div>
           </div>
 
-          <button type="submit" class="button button-form">
+          <button type="submit" class="button button-form" id="submitButton">
             Отправить
             <svg
               width="17"
@@ -2884,6 +2886,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/image.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/slider.js"></script>
   </body>

@@ -9,7 +9,7 @@ let linkMapNsk = document.querySelector('.tab__map-nsk');
 let linkMapMsk = document.querySelector('.tab__map-msk');
 
 let modalMaps = document.querySelectorAll('.modal-map');
-let buttons = document.querySelectorAll('.button');
+let buttons = document.querySelectorAll('.button[type="button"]');
 let popup = document.querySelector('.page-body__form');
 let closes = document.querySelectorAll('.btn-close');
 
@@ -33,6 +33,7 @@ buttons.forEach(function (button) {
   button.addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.toggle('modal-show');
+    document.body.style.overflow = 'hidden';
   });
 });
 
@@ -55,6 +56,7 @@ closes.forEach(function (close) {
     popup.classList.remove('modal-show');
     modalMaps.forEach(function (modalMap) {
       modalMap.classList.remove('modal-show');
+      document.body.style.overflow = 'auto';
     });
   });
 });

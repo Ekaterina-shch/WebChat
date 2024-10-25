@@ -882,9 +882,25 @@ input:-webkit-autofill {
   height: 130px;
   resize: none;
 }
-
+.form__item--tablet {
+  justify-content: space-between;
+}
 .form__item--file {
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
+}
+
+#fileList {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+
+  li button {
+    background-color: transparent;
+    color: #dc3545;
+  }
 }
 
 .form-file {
@@ -904,6 +920,7 @@ input:-webkit-autofill {
 
 .form__item--chebox {
   display: flex;
+  position: relative;
 }
 
 .label-checkbox {
@@ -919,8 +936,12 @@ input:-webkit-autofill {
 
 .checkbox {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   opacity: 0;
+  width: 28px;
+  height: 28px;
 }
 
 .checkbox + label {
@@ -1441,14 +1462,13 @@ input:-webkit-autofill {
   }
 
   .form__item--tablet {
-    flex-direction: row;
+    flex-direction: column;
     gap: 25px;
   }
 
   .form__item--file {
     margin: 10px 0 0 0;
   }
-
   .label-file {
     font-size: 16px;
   }
