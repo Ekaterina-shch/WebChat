@@ -1,3 +1,5 @@
 # Web Chat
 
-## 2021
+## Разработка веб-сайта на основе макета от Figma 2021
+
+**Стек:** html, css, js, Slick Slider, jQuery.
